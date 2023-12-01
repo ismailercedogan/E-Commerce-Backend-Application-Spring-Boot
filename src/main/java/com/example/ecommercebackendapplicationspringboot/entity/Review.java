@@ -1,4 +1,4 @@
-package com.example.ecommercebackendapplicationspringboot;
+package com.example.ecommercebackendapplicationspringboot.entity;
 import jakarta.persistence.*;
 
 @Entity
