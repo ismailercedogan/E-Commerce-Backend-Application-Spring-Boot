@@ -49,7 +49,24 @@ public class UserRepositoryTest {
         assertThat(found.getEmail())
                 .isEqualTo(user.getEmail());
     }
+    @Test
+    public void whenUpdateUser_thenUserShouldBeUpdated() {
+        // given
+        User user = new User();
+        user.setUsername("test");
+        user.setEmail("test@example.com");
+        entityManager.persist(user);
+        entityManager.flush();
 
+        // when
+        user.setUsername("updated");
+        user.setEmail("updated@example.com");
+        userRepository.save(user);
+
+        // then
+        assertThat(userRepository.findByUsername(user.getUsername()).getEmail())
+                .isEqualTo(user.getEmail());
+    }
     @Test
     public void whenSaveUser_thenUserShouldBeSaved() {
         // given
