@@ -1,8 +1,8 @@
 package com.example.ecommercebackendapplicationspringboot.repository;
 
-import com.example.ecommercebackendapplicationspringboot.entity.Order;
+import com.example.ecommercebackendapplicationspringboot.entity.OrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface OrderRepository extends JpaRepository<Order, Long> {
+public interface OrderRepository extends JpaRepository<OrderEntity, Long> {
 }
 

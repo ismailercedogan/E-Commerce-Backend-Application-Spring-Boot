@@ -18,7 +18,7 @@ public class Address {
     private String Zip;
 
     @OneToMany(mappedBy = "address")
-    private List<Order> orders;
+    private List<OrderEntity> orderEntities;
 
     public Long getId() {
         return id;
@@ -60,12 +60,12 @@ public class Address {
         Zip = zip;
     }
 
-    public List<Order> getOrders() {
-        return orders;
+    public List<OrderEntity> getOrders() {
+        return orderEntities;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
+    public void setOrders(List<OrderEntity> orderEntities) {
+        this.orderEntities = orderEntities;
     }
 }
 

@@ -67,17 +67,17 @@ public class ECommerceBackendApplicationSpringBootApplication {
                     item2 = itemRepository.save(item2);
 
                     // Create initial orders, associate them with users and addresses, and add products to them
-                    Order order1 = new Order();
-                    order1.setUser(user1);
-                    order1.setTotalAmount(new BigDecimal(10));
-                    order1.setProducts(Arrays.asList(product1));
-                    order1 = orderRepository.save(order1);
+                    OrderEntity orderEntity1 = new OrderEntity();
+                    orderEntity1.setUser(user1);
+                    orderEntity1.setTotalAmount(new BigDecimal(10));
+                    orderEntity1.setProducts(Arrays.asList(product1));
+                    orderEntity1 = orderRepository.save(orderEntity1);
 
-                    Order order2 = new Order();
-                    order2.setUser(user2);
-                    order2.setTotalAmount(new BigDecimal(40));
-                    order2.setProducts(Arrays.asList(product1, product2));
-                    order2 = orderRepository.save(order2);
+                    OrderEntity orderEntity2 = new OrderEntity();
+                    orderEntity2.setUser(user2);
+                    orderEntity2.setTotalAmount(new BigDecimal(40));
+                    orderEntity2.setProducts(Arrays.asList(product1, product2));
+                    orderEntity2 = orderRepository.save(orderEntity2);
 
                     // Create initial addresses and associate them with orders
                     Address address1 = new Address();
@@ -85,7 +85,7 @@ public class ECommerceBackendApplicationSpringBootApplication {
                     address1.setCity("City 1");
                     address1.setState("State 1");
                     address1.setZip("Zip 1");
-                    address1.setOrders(Arrays.asList(order1));
+                    address1.setOrders(Arrays.asList(orderEntity1));
                     address1 = addressRepository.save(address1);
 
                     Address address2 = new Address();
@@ -93,7 +93,7 @@ public class ECommerceBackendApplicationSpringBootApplication {
                     address2.setCity("City 2");
                     address2.setState("State 2");
                     address2.setZip("Zip 2");
-                    address2.setOrders(Arrays.asList(order2));
+                    address2.setOrders(Arrays.asList(orderEntity2));
                     address2 = addressRepository.save(address2);
                 };
             }
