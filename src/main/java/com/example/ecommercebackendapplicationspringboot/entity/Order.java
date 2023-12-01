@@ -63,4 +63,12 @@ public class Order {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    public BigDecimal getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(BigDecimal totalAmount) {
+        this.totalAmount = totalAmount;
+    }
 }
