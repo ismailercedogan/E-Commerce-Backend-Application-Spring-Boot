@@ -1,4 +1,4 @@
-package com.example.ecommercebackendaplicationspringboot;
+package com.example.ecommercebackendapplicationspringboot;
 
 import jakarta.persistence.*;
 import java.util.List;
