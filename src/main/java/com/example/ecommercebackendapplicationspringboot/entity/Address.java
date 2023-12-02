@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+
 @Entity
 public class Address {
     @Id
@@ -15,7 +16,7 @@ public class Address {
 
     private String state;
 
-    private String Zip;
+    private String zip;
 
     @OneToMany(mappedBy = "address")
     private List<OrderEntity> orderEntities;
@@ -53,11 +54,11 @@ public class Address {
     }
 
     public String getZip() {
-        return Zip;
+        return zip;
     }
 
     public void setZip(String zip) {
-        Zip = zip;
+        zip = zip;
     }
 
     public List<OrderEntity> getOrders() {

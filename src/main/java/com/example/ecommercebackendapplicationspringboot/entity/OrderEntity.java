@@ -30,7 +30,7 @@ public class OrderEntity {
     private List<Product> products;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "address_id")
     private Address address;
 
     public Long getId() {
@@ -71,5 +71,13 @@ public class OrderEntity {
 
     public void setTotalAmount(BigDecimal totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 }
