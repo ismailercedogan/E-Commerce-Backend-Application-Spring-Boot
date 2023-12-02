@@ -58,7 +58,7 @@ public class Address {
     }
 
     public void setZip(String zip) {
-        zip = zip;
+        this.zip = zip;
     }
 
     public List<OrderEntity> getOrders() {
